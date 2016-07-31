@@ -1,0 +1,90 @@
+/*
+** palindrome.h for  in /home/bertha_e/rendu/Synthse/palindrome
+** 
+** Made by Berthaud Elodie
+** Login   <bertha_e@epitech.net>
+** 
+** Started on  Thu Jun 16 12:04:01 2016 Berthaud Elodie
+** Last update Thu Jun 16 20:38:08 2016 Berthaud Elodie
+*/
+
+#ifndef PALINDROME_H_
+# define PALINDROME_H_
+
+typedef struct		s_pal
+{
+  char			**opt;
+  int			nb;
+  int			pal;
+  int			end;
+  int			iter;
+  int			base;
+  int			imin;
+  int			imax;
+}			t_pal;
+
+/*
+**iteration.c
+*/
+int	iteration(int, int);
+
+/*
+**my_int_len.c
+*/
+int	my_int_len(int);
+
+/*
+**get_int.c
+*/
+char	*get_int(int);
+
+/*
+**revstr.c
+*/
+char	*revstr(char *);
+
+/*
+**tab.c
+*/
+char	**tab_opt();
+
+/*
+**fill_with_opt.c
+*/
+t_pal	*fill_n(int, t_pal *);
+t_pal	*fill_p(int, t_pal *);
+t_pal	*fill_b(int, t_pal *);
+t_pal	*fill_imin(int, t_pal *);
+t_pal	*fill_imax(int, t_pal *);
+
+/*
+**options.c
+*/
+int	n_opt(t_pal *);
+int	p_opt(t_pal *);
+int	b_opt(t_pal *);
+int	imin_opt(t_pal *);
+int	imax_opt(t_pal *);
+
+/*
+**fill_struct.c
+*/
+t_pal	*check_opt(char *, char **, t_pal *, int);
+t_pal	*fill_struct(char **);
+
+/*
+**my_strdup.c
+*/
+char	*my_strdup(char *);
+
+/*
+**tab_functions.c
+*/
+int	tab_functions(char *, t_pal *);
+
+/*
+**prints.c
+*/
+int	print_n_opt(t_pal *);
+
+#endif /* !palindrome.h */
